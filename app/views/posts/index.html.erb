@@ -1,0 +1,13 @@
+<h1>All Posts</h1>
+
+<% @posts.each do |post| %>
+  
+
+    <h2><li><%= post.title %></li></h2>
+    <p style="font-size:16px;color:crimson;font-family:Courier New"><%= post.content %></p>
+    
+      
+<% end %>
+<% if user_signed_in? %>
+      <span><p style="font-size:15px;color:yellow;font-family:Arial"> by: <%= Post.first.user.username %></p></span>
+      <% end %>
